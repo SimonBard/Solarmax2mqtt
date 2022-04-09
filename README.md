@@ -1,7 +1,7 @@
 ﻿# Solarmax2mqtt
+The code is implemented in python3
 
 Solarmax2MQTT can be used to retrieve data from your Power Inverter Solarmax and to send it to a MQTT broker. 
-
 The company Solarmax was a former power inverter company which refirmed several times. 
 
 Get started
