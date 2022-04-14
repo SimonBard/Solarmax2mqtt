@@ -13,9 +13,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Developed 2009-2010 by Bernd Wurst <bernd@schokokeks.org> 
+# Developed 2022 by Simon Bard, adapted from Bernd Wurst> 
 # for own use.
-# Released to the public in 2012.
 
 
 import socket, datetime
