@@ -1,0 +1,80 @@
+2023-01-02T11:37:11.971965: Closing open connection to 192.168.178.6:12345
+2023-01-02T11:37:11.972053: establishing connection to 192.168.178.6:12345...
+2023-01-02T11:37:12.007054: connected.
+2023-01-02T11:37:12.007321: searching for #1 (socket: <socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.103.44', 33270), raddr=('192.168.178.6', 12345)>)
+2023-01-02T11:37:12.007366: searching for #1 (socket: <socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.103.44', 33270), raddr=('192.168.178.6', 12345)>)
+2023-01-02T11:37:12.007428: Trying to send this query to Inverter no 1: b'{FB;01;1E|64:ADR;TYP;PIN|06A2}'
+2023-01-02T11:37:12.007457: Called send_query
+2023-01-02T11:37:12.007467: 192.168.178.6 => b'{FB;01;1E|64:ADR;TYP;PIN|06A2}'
+2023-01-02T11:37:12.007547: Receiving data...
+2023-01-02T11:37:12.100621: Received the following data:  {01;FB;2A|64:ADR=1;TYP=4E2A;PIN=11F8|0953}
+2023-01-02T11:37:12.100747: Inverter found
+2023-01-02T11:37:12.100762: found all inverters:
+2023-01-02T11:37:12.100771: {1: {'desc': 'SolarMax 2000S', 'max': 2000, 'installed': 2300.0}}
+2023-01-02T11:37:12.100855: Trying to send this query to Inverter no 1: b'{FB;01;3B|64:KLD;PAC;KDY;KT0;IDC;UDC;IL1;UL1;FDAT;SYS|0E4B}'
+2023-01-02T11:37:12.100867: Called send_query
+2023-01-02T11:37:12.100875: 192.168.178.6 => b'{FB;01;3B|64:KLD;PAC;KDY;KT0;IDC;UDC;IL1;UL1;FDAT;SYS|0E4B}'
+2023-01-02T11:37:12.100930: Receiving data...
+2023-01-02T11:37:12.246781: Received the following data:  {01;FB;66|64:KLD=9;PAC=88;KDY=0;KT0=52F4;IDC=22;UDC=99E;IL1=33;UL1=8BA;FDAT=7DD0613,0;SYS=4E28,0|17BE}
+2023-01-02T11:37:12.246973: Trying to send this query to Inverter no 1: b'{FB;01;1A|64:SYS;SAL|0587}'
+2023-01-02T11:37:12.246989: Called send_query
+2023-01-02T11:37:12.247000: 192.168.178.6 => b'{FB;01;1A|64:SYS;SAL|0587}'
+2023-01-02T11:37:12.247070: Receiving data...
+2023-01-02T11:37:12.332478: Received the following data:  {01;FB;23|64:SYS=4E28,0;SAL=0|0763}
+
+      WR 1 (SolarMax 2000S)
+        Status: Mains operation
+        Aktuell:      68.0 Watt / errechnet:    113.9 W (4 % von 2300 Watt)
+        P_DC:         83.7 Watt (Wirkungsgrad: 136 %)
+        Gesamt heute:        0.0   kWh
+        Gesamt bisher:   21236.0   kWh (seit 2013-06-19)
+      
+{"Energy_LastDay":0.9,"AC_power_being_generated":68.0,"Yield_today_(kWh)_Tagesertrag":0.0,"total_yield_(kWh)":21236,"DC Current":0.34,"DC_voltage_(VDC)":246.2,"Current_phase_1":0.51,"Voltage_Phase_1":223.4,"Factory_Date":2013-06-19 00:00:00,"Operation_State":(20008, 0)}
+data published 
+
+Traceback (most recent call last):
+  File "/home/simon/Downloads/Solarmax2mqtt/solarmax3.py", line 133, in <module>
+    time.sleep(10)
+KeyboardInterrupt
+2023-01-02T11:37:17.638181: destructor called
+2023-01-02T11:37:17.638313: Closing open connection to 192.168.178.6:12345
+2023-01-02T11:37:19.521657: Closing open connection to 192.168.178.6:12345
+2023-01-02T11:37:19.521716: establishing connection to 192.168.178.6:12345...
+2023-01-02T11:37:19.556841: connected.
+2023-01-02T11:37:19.556990: searching for #1 (socket: <socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.103.44', 34246), raddr=('192.168.178.6', 12345)>)
+2023-01-02T11:37:19.557029: searching for #1 (socket: <socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.103.44', 34246), raddr=('192.168.178.6', 12345)>)
+2023-01-02T11:37:19.557090: Trying to send this query to Inverter no 1: b'{FB;01;1E|64:ADR;TYP;PIN|06A2}'
+2023-01-02T11:37:19.557102: Called send_query
+2023-01-02T11:37:19.557110: 192.168.178.6 => b'{FB;01;1E|64:ADR;TYP;PIN|06A2}'
+2023-01-02T11:37:19.557187: Receiving data...
+2023-01-02T11:37:19.659339: Received the following data:  {01;FB;2A|64:ADR=1;TYP=4E2A;PIN=11F8|0953}
+2023-01-02T11:37:19.659450: Inverter found
+2023-01-02T11:37:19.659465: found all inverters:
+2023-01-02T11:37:19.659474: {1: {'desc': 'SolarMax 2000S', 'max': 2000, 'installed': 2300.0}}
+2023-01-02T11:37:19.659560: Trying to send this query to Inverter no 1: b'{FB;01;3B|64:KLD;PAC;KDY;KT0;IDC;UDC;IL1;UL1;FDAT;SYS|0E4B}'
+2023-01-02T11:37:19.659572: Called send_query
+2023-01-02T11:37:19.659581: 192.168.178.6 => b'{FB;01;3B|64:KLD;PAC;KDY;KT0;IDC;UDC;IL1;UL1;FDAT;SYS|0E4B}'
+2023-01-02T11:37:19.659659: Receiving data...
+2023-01-02T11:37:19.807918: Received the following data:  {01;FB;66|64:KLD=9;PAC=86;KDY=0;KT0=52F4;IDC=22;UDC=9A8;IL1=33;UL1=8BB;FDAT=7DD0613,0;SYS=4E28,0|17B8}
+2023-01-02T11:37:19.808135: Trying to send this query to Inverter no 1: b'{FB;01;1A|64:SYS;SAL|0587}'
+2023-01-02T11:37:19.808151: Called send_query
+2023-01-02T11:37:19.808162: 192.168.178.6 => b'{FB;01;1A|64:SYS;SAL|0587}'
+2023-01-02T11:37:19.808247: Receiving data...
+2023-01-02T11:37:19.890387: Received the following data:  {01;FB;23|64:SYS=4E28,0;SAL=0|0763}
+
+      WR 1 (SolarMax 2000S)
+        Status: Mains operation
+        Aktuell:      67.0 Watt / errechnet:    114.0 W (4 % von 2300 Watt)
+        P_DC:         84.0 Watt (Wirkungsgrad: 135 %)
+        Gesamt heute:        0.0   kWh
+        Gesamt bisher:   21236.0   kWh (seit 2013-06-19)
+      
+{"Energy_LastDay":0.9,"AC_power_being_generated":67.0,"Yield_today_(kWh)_Tagesertrag":0.0,"total_yield_(kWh)":21236,"DC Current":0.34,"DC_voltage_(VDC)":247.2,"Current_phase_1":0.51,"Voltage_Phase_1":223.5,"Factory_Date":2013-06-19 00:00:00,"Operation_State":(20008, 0)}
+data published 
+
+Traceback (most recent call last):
+  File "/home/simon/Downloads/Solarmax2mqtt/solarmax3.py", line 133, in <module>
+    time.sleep(10)
+KeyboardInterrupt
+2023-01-02T11:37:24.247618: destructor called
+2023-01-02T11:37:24.247705: Closing open connection to 192.168.178.6:12345

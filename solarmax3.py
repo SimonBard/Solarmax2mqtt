@@ -17,7 +17,7 @@
 # for own use.
 # Released to the public in 2022.
 
-
+import json
 import time, datetime
 import paho.mqtt.client as paho
 
@@ -32,13 +32,13 @@ query_codes = {
     'TKK': 'Inverter_Operating_temp',
     'IL1': 'Current_phase_1',
     'SYS': 'Operation_State',
-    'TNF': 'generated_frequency_(Hz)',
-    'UDC': 'DC_voltage_(VDC)',
+    'TNF': 'generated_frequency_Hz',
+    'UDC': 'DC_voltage_VDC',
     'PAC': 'AC_power_being_generated',
-    'PRL': 'relative_output_(%)',
-    'KT0': 'total_yield_(kWh)',
-    'KDY': 'Yield_today_(kWh)_Tagesertrag',
-    'KYR': 'Energy_this_Year_(kWh)',
+    'PRL': 'relative_output_%',
+    'KT0': 'total_yield_kWh',
+    'KDY': 'Yield_today_kWh_Tagesertrag',
+    'KYR': 'Energy_this_Year_kWh',
     'KMT': 'Energy_ThisYear',
     'KLD': 'Energy_LastDay'
 }
@@ -119,11 +119,12 @@ while True:
 
         pubstring = '{'
         for query in query_types:
-            pubstring = pubstring + '"' + query_codes[query] + '"' + ':' + str(current[query]) + ','
+            pubstring = pubstring + '"' + query_codes[query] + '"' + ' : '+ '"' + str(current[query])+ '"' + ','
         pubstring = pubstring[:-1]  # removes last comma again
         pubstring = pubstring + '}'
         print(pubstring)
-        ret = client1.publish('Solarmax/ENERGY', pubstring)  # publish
+        MQTT_MSG = str(pubstring)
+        ret = client1.publish('Solarmax/ENERGY', MQTT_MSG)  # publish
     except Exception as e:
         print(e)
         pass
